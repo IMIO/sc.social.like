@@ -3,7 +3,7 @@ Changelog
 
 There's a frood who really knows where his towel is.
 
-2.10.2 (unreleased)
+2.10.2 (2019-03-13)
 ^^^^^^^^^^^^^^^^^^^
 
 - Fix permission error on image.
