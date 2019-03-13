@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+from AccessControl import Unauthorized
 from Acquisition import aq_base
 from Products.Archetypes.interfaces import IBaseContent
 from Products.CMFPlone.utils import safe_hasattr
@@ -48,7 +49,7 @@ def get_content_image(context,
         if view:
             try:
                 sizes = view.getImageSize(field)
-            except AttributeError:
+            except (AttributeError, Unauthorized):
                 sizes = img = None
             if sizes == (0, 0) or sizes == ('', ''):
                 # this avoid strange cases where we can't get size infos.
